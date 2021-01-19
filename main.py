@@ -26,8 +26,5 @@ async def on_message(message):
             await message.channel.send(f'{message.author.display_name} has death rolled a 1.')
         else:
             await message.channel.send(finNum)
-    elif message.content.startswith('$updateAvatar'):
-        await client.user.edit(avatar='https://i.ytimg.com/vi/A2TAwJNhzng/hqdefault.jpg')
-        print("Updated Avatar")
 
 client.run(os.getenv('TOKEN'))
