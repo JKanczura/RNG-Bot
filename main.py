@@ -7,6 +7,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print("Testing 123")
+    random.seed(1)
 
 @client.event
 async def on_message(message):
@@ -17,8 +18,8 @@ async def on_message(message):
         splitRet = message.content.split()
         print(splitRet)
         s = int(splitRet[1], 10)
-        random.seed(s)
-        finNum = str(random.Random())
+
+        finNum = random.randint(0,s)
 
         await message.channel.send(finNum)
 
