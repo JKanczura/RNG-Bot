@@ -22,7 +22,7 @@ async def on_message(message):
         finNum = random.randint(1,s)
 
         if (finNum == 1):
-            await message.channel.send(f'{message.author} has death rolled.')
+            await message.channel.send(f'{message.author.name} has death rolled a 1.')
         else:
             await message.channel.send(finNum)
 
