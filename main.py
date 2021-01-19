@@ -21,6 +21,9 @@ async def on_message(message):
 
         finNum = random.randint(1,s)
 
-        await message.channel.send(finNum)
+        if (finNum == 1):
+            await message.channel.send(f'{message.author} has death rolled.')
+        else:
+            await message.channel.send(finNum)
 
 client.run(os.getenv('TOKEN'))
