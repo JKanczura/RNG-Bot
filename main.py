@@ -18,7 +18,8 @@ async def on_message(message):
         print(splitRet)
         s = int(splitRet[1], 10)
         random.seed(s)
+        finNum = str(random.Random())
 
-        await message.channel.send(random.Random())
+        await message.channel.send(finNum)
 
 client.run(os.getenv('TOKEN'))
