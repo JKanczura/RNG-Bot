@@ -15,6 +15,7 @@ async def on_message(message):
     
     if message.content.startswith('$roll'):
         splitRet = message.content.split(' ', 0)
+        print(splitRet)
         s = int(splitRet[1], 10)
         random.seed(s)
 
