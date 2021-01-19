@@ -19,7 +19,7 @@ async def on_message(message):
         print(splitRet)
         s = int(splitRet[1], 10)
 
-        finNum = random.randint(0,s)
+        finNum = random.randint(1,s)
 
         await message.channel.send(finNum)
 
